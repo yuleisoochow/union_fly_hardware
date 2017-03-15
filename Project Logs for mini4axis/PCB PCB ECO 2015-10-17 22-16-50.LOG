@@ -1,0 +1,76 @@
+Added Component: Designator=R1(RES_0603)
+Added Component: Designator=R2(RES_0603)
+Added Component: Designator=R3(RES_0603)
+Added Component: Designator=R4(RES_0603)
+Added Component: Designator=R5(RES_0603)
+Added Component: Designator=R6(RES_0603)
+Added Component: Designator=R7(RES_0603)
+Added Component: Designator=R8(RES_0603)
+Added Component: Designator=R9(RES_0603)
+Added Component: Designator=R10(RES_0603)
+Added Component: Designator=R11(RES_0603)
+Added Component: Designator=R12(RES_0603)
+Added Component: Designator=R13(RES_0603)
+Added Component: Designator=R14(RES_0603)
+Added Component: Designator=R15(RES_0603)
+Added Component: Designator=R16(RES_0603)
+Added Component: Designator=R17(RES_0603)
+Added Component: Designator=R18(RES_0603)
+Added Component: Designator=R19(RES_0603)
+Added Pin To Net: NetName=3V3 Pin=R1-1
+Added Pin To Net: NetName=HMC5883_IRQ Pin=R1-2
+Added Pin To Net: NetName=NetD1_1 Pin=R2-1
+Added Pin To Net: NetName=3V3 Pin=R2-2
+Added Pin To Net: NetName=NetD2_1 Pin=R3-1
+Added Pin To Net: NetName=3V3 Pin=R3-2
+Added Pin To Net: NetName=NetLS1_1 Pin=R4-1
+Added Pin To Net: NetName=3V3 Pin=R4-2
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=PWM.M1 Pin=R5-2
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=PWM.M2 Pin=R6-2
+Added Pin To Net: NetName=GND Pin=R7-1
+Added Pin To Net: NetName=PWM.M3 Pin=R7-2
+Added Pin To Net: NetName=GND Pin=R8-1
+Added Pin To Net: NetName=PWM.M4 Pin=R8-2
+Added Pin To Net: NetName=NetR9_1 Pin=R9-1
+Added Pin To Net: NetName=NetD3_2 Pin=R9-2
+Added Pin To Net: NetName=NetR10_1 Pin=R10-1
+Added Pin To Net: NetName=GND Pin=R10-2
+Added Pin To Net: NetName=NetC7_1 Pin=R11-1
+Added Pin To Net: NetName=5V Pin=R11-2
+Added Pin To Net: NetName=GND Pin=R12-1
+Added Pin To Net: NetName=NetC7_1 Pin=R12-2
+Added Pin To Net: NetName=BAT_CHECK Pin=R13-1
+Added Pin To Net: NetName=3V7 Pin=R13-2
+Added Pin To Net: NetName=GND Pin=R14-1
+Added Pin To Net: NetName=BAT_CHECK Pin=R14-2
+Added Pin To Net: NetName=3V3 Pin=R15-1
+Added Pin To Net: NetName=I2C1.SDA Pin=R15-2
+Added Pin To Net: NetName=3V3 Pin=R16-1
+Added Pin To Net: NetName=I2C1.SCL Pin=R16-2
+Added Pin To Net: NetName=RESET Pin=R17-1
+Added Pin To Net: NetName=3V3 Pin=R17-2
+Added Pin To Net: NetName=GND Pin=R18-1
+Added Pin To Net: NetName=NetR18_2 Pin=R18-2
+Added Pin To Net: NetName=OSC_OUT Pin=R19-1
+Added Pin To Net: NetName=OSC_IN Pin=R19-2
+Added Member To Class: ClassName=HMC5883 Member=Component R1 Res1
+Added Member To Class: ClassName=LED BELL Member=Component R2 Res1
+Added Member To Class: ClassName=LED BELL Member=Component R3 Res1
+Added Member To Class: ClassName=LED BELL Member=Component R4 Res1
+Added Member To Class: ClassName=MOTORS Member=Component R5 Res1
+Added Member To Class: ClassName=MOTORS Member=Component R6 Res1
+Added Member To Class: ClassName=MOTORS Member=Component R7 Res1
+Added Member To Class: ClassName=MOTORS Member=Component R8 Res1
+Added Member To Class: ClassName=POWER Member=Component R9 Res Semi
+Added Member To Class: ClassName=POWER Member=Component R10 Res Semi
+Added Member To Class: ClassName=POWER Member=Component R11 Res Semi
+Added Member To Class: ClassName=POWER Member=Component R12 Res Semi
+Added Member To Class: ClassName=POWER Member=Component R13 Res Semi
+Added Member To Class: ClassName=POWER Member=Component R14 Res Semi
+Added Member To Class: ClassName=MPU6050 Member=Component R15 Res1
+Added Member To Class: ClassName=MPU6050 Member=Component R16 Res1
+Added Member To Class: ClassName=STM32F103RC Member=Component R17 Res1
+Added Member To Class: ClassName=STM32F103RC Member=Component R18 Res1
+Added Member To Class: ClassName=STM32F103RC Member=Component R19 Res1

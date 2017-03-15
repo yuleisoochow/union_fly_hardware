@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=P3 Old Footprint=HDR2X4 New Footprint=NRF24L01 MODULE
+Change Component Footprint: Designator=U7 Old Footprint=STM32F103RC_QFP64 New Footprint=STM32F_64

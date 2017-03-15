@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=NetM1_2 Pin=Q1-2
+Removed Pin From Net: NetName=GND Pin=Q1-3
+Removed Pin From Net: NetName=NetM2_2 Pin=Q2-2
+Removed Pin From Net: NetName=GND Pin=Q2-3
+Removed Pin From Net: NetName=NetM3_2 Pin=Q3-2
+Removed Pin From Net: NetName=GND Pin=Q3-3
+Removed Pin From Net: NetName=NetM4_2 Pin=Q4-2
+Removed Pin From Net: NetName=GND Pin=Q4-3
+Change Component DesignItemId : Designator=Q1 Old DesignItemId=NMOS-2 New DesignItemId=SI2302
+Change Component DesignItemId : Designator=Q2 Old DesignItemId=NMOS-2 New DesignItemId=SI2302
+Change Component DesignItemId : Designator=Q3 Old DesignItemId=NMOS-2 New DesignItemId=SI2302
+Change Component DesignItemId : Designator=Q4 Old DesignItemId=NMOS-2 New DesignItemId=SI2302
+Change Component Description : Designator=Q1 Old Description=N-Channel Power MOSFET New Description=N-Channel MOSFET
+Change Component Description : Designator=Q2 Old Description=N-Channel Power MOSFET New Description=N-Channel MOSFET
+Change Component Description : Designator=Q3 Old Description=N-Channel Power MOSFET New Description=N-Channel MOSFET
+Change Component Description : Designator=Q4 Old Description=N-Channel Power MOSFET New Description=N-Channel MOSFET
+Change Component Library : Designator=Q1 Old Library=Miscellaneous Devices.IntLib New Library=Schlib1.SchLib
+Change Component Library : Designator=Q2 Old Library=Miscellaneous Devices.IntLib New Library=Schlib1.SchLib
+Change Component Library : Designator=Q3 Old Library=Miscellaneous Devices.IntLib New Library=Schlib1.SchLib
+Change Component Library : Designator=Q4 Old Library=Miscellaneous Devices.IntLib New Library=Schlib1.SchLib
+Added Pin To Net: NetName=GND Pin=Q1-2
+Added Pin To Net: NetName=NetM1_2 Pin=Q1-3
+Added Pin To Net: NetName=GND Pin=Q2-2
+Added Pin To Net: NetName=NetM2_2 Pin=Q2-3
+Added Pin To Net: NetName=GND Pin=Q3-2
+Added Pin To Net: NetName=NetM3_2 Pin=Q3-3
+Added Pin To Net: NetName=GND Pin=Q4-2
+Added Pin To Net: NetName=NetM4_2 Pin=Q4-3

@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=NRF24L01_CSN Pin=U7-24
+Removed Pin From Net: NetName=HMC5883_IRQ Pin=U7-27
+Removed Pin From Net: NetName=MPU6050_IRQ Pin=U7-28
+Removed Pin From Net: NetName=OSC_IN Pin=Y1-1
+Removed Pin From Net: NetName=OSC_OUT Pin=Y1-2
+Change Component DesignItemId : Designator=Y1 Old DesignItemId=XTAL New DesignItemId=OSCILLATOR
+Change Component Footprint: Designator=LS1 Old Footprint=BUZZER New Footprint=LED0805
+Change Component Footprint: Designator=Y1 Old Footprint=OSC_SMD_ New Footprint=3225
+Change Component Comment : Designator=Y1 Old Comment=8MHZ New Comment=OSCILLATOR
+Added Pin To Net: NetName=NRF24L01_CSN Pin=U7-20
+Added Pin To Net: NetName=HMC5883_IRQ Pin=U7-56
+Added Pin To Net: NetName=MPU6050_IRQ Pin=U7-57
+Added Pin To Net: NetName=OSC_OUT Pin=Y1-1
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Pin To Net: NetName=OSC_IN Pin=Y1-3
+Added Pin To Net: NetName=GND Pin=Y1-4
+Added Pin To Net: NetName=NRF24L01_CE Pin=P3-3
+Added Pin To Net: NetName=NRF24L01_CE Pin=U7-24
+Added Net: Name=NRF24L01_CE

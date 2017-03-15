@@ -1,0 +1,356 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD13\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2015/11/6</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">14:15:43</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc" class="file"><acronym title="F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc">F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">4</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDWJCRQYKMPOYAEPS1N5B0N4WO5NAQYKDHFQSRK2FCLBMBFPMD4ASI"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKWKCJTE2PVLHM1IF2LXHDC5HMB3J3ZFKVXGINCC0KBST5XXUYRND">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWLRQFPT3DB1XLU0WVVCEFILI3YFWIL3WSW3KTIXR1Y4AQTM1QCB">Silk to Silk (Clearance=10mil) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1Z4IJ4H4XVISLME02H0SVIADCMPBHDDRSU2JVID3234HCQPXL4EL">Silk To Solder Mask (Clearance=10mil) (Disabled)(IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCAH2ORQWBU5EGIYWUFIED151XPR12DE5KHCNNBCZ3HIYVWM2KXCL">Minimum Solder Mask Sliver (Gap=10mil) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCHQUYNU21HZ0EJHV4E4R24TDZBVEQC442SOQVFNQOBPUV53C34XL">Hole To Hole Clearance (Gap=10mil) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXHUQD01CS2FDPMCJECB10SRYTF5C0SFPYQNA33NGO1PMU2WV4KHO">Hole Size Constraint (Min=1mil) (Max=300mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDH0RP1DHQS3PWLTLCEQDBN21B5PA2USSBAVK0QDM1HVWNZGYTMWAB">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCTXNI2QGZQENDVNKU2GQ5R2G0MFO5TDGO2SVKNIK3HAVTKAWYIBG">Width Constraint (Min=8mil) (Max=50mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZROGIF0H1LV2IEIYDRQUBE3KLUQZ2TTJKXZ50IHIGJVWU2KTOJD">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDC41MYZN3CV3YBBPDWISJ1LI5XIIQXCL5ZABYC0EUJISXEEXTEKQL">Clearance Constraint (Gap=7mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCISXEL0P0VMHO3YB2B0KGMLDALZWIBNKTBLWPNPENJSNQ30DHYZI">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDH2Q5P0BTX10FDBTZ0Z0MN1TAAFX0RFZTVXHVDJBOXDWJVN0K113K">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZQNST44QFYXIOAKTMPYZI4QPSIHHEZ0JUZLYVNMF4RB5IB4AZWQG">Clearance Constraint (Gap=15mil) (InPolygon),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">4</td>
+</tr>
+</table><br><hr><a name="IDH2Q5P0BTX10FDBTZ0Z0MN1TAAFX0RFZTVXHVDJBOXDWJVN0K113K"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8201.346mil|Location2.X=8231.346mil|Location1.Y=5305.346mil|Location2.Y=5335.346mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8201.346mil|Location2.X=8231.346mil|Location1.Y=5305.346mil|Location2.Y=5335.346mil|Absolute=True">Via (-287.654mil,-354.654mil) Top Layer to Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8180.85mil|Location2.X=8295.15mil|Location1.Y=5284.85mil|Location2.Y=5399.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8180.85mil|Location2.X=8295.15mil|Location1.Y=5284.85mil|Location2.Y=5399.15mil|Absolute=True">Pad U6-25(-266mil,-333mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8244.654mil|Location2.X=8274.654mil|Location1.Y=5305.346mil|Location2.Y=5335.346mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8244.654mil|Location2.X=8274.654mil|Location1.Y=5305.346mil|Location2.Y=5335.346mil|Absolute=True">Via (-244.346mil,-354.654mil) Top Layer to Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8180.85mil|Location2.X=8295.15mil|Location1.Y=5284.85mil|Location2.Y=5399.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8180.85mil|Location2.X=8295.15mil|Location1.Y=5284.85mil|Location2.Y=5399.15mil|Absolute=True">Pad U6-25(-266mil,-333mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8200.535mil|Location2.X=8232.157mil|Location1.Y=5347.843mil|Location2.Y=5379.465mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8200.535mil|Location2.X=8232.157mil|Location1.Y=5347.843mil|Location2.Y=5379.465mil|Absolute=True">Via (-287.654mil,-311.346mil) Top Layer to Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8180.85mil|Location2.X=8295.15mil|Location1.Y=5284.85mil|Location2.Y=5399.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8180.85mil|Location2.X=8295.15mil|Location1.Y=5284.85mil|Location2.Y=5399.15mil|Absolute=True">Pad U6-25(-266mil,-333mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8244.654mil|Location2.X=8274.654mil|Location1.Y=5348.654mil|Location2.Y=5378.654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8244.654mil|Location2.X=8274.654mil|Location1.Y=5348.654mil|Location2.Y=5378.654mil|Absolute=True">Via (-244.346mil,-311.346mil) Top Layer to Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\%E5%9B%9B%E8%BD%B4\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8180.85mil|Location2.X=8295.15mil|Location1.Y=5284.85mil|Location2.Y=5399.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\四轴\PCB_V_0_0_1_20151104\PCB_V_0_0_1_20151018\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8180.85mil|Location2.X=8295.15mil|Location1.Y=5284.85mil|Location2.Y=5399.15mil|Absolute=True">Pad U6-25(-266mil,-333mil)  Top Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

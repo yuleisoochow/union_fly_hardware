@@ -1,0 +1,86 @@
+Removed Pin From Net: NetName=GPIO_BELL Pin=U7-2
+Removed Pin From Net: NetName=GPIO_LED0 Pin=U7-8
+Removed Pin From Net: NetName=GPIO_LED1 Pin=U7-9
+Removed Pin From Net: NetName=GPIO_LED2 Pin=U7-10
+Removed Pin From Net: NetName=GPIO_LED3 Pin=U7-11
+Removed Pin From Net: NetName=GND Pin=U7-12
+Removed Pin From Net: NetName=3V3 Pin=U7-13
+Removed Pin From Net: NetName=PWM.M1 Pin=U7-14
+Removed Pin From Net: NetName=PWM.M2 Pin=U7-15
+Removed Pin From Net: NetName=PWM.M3 Pin=U7-16
+Removed Pin From Net: NetName=PWM.M4 Pin=U7-17
+Removed Pin From Net: NetName=GND Pin=U7-18
+Removed Pin From Net: NetName=3V3 Pin=U7-19
+Removed Pin From Net: NetName=NRF24L01_CSN Pin=U7-20
+Removed Pin From Net: NetName=SPI1.SCLK Pin=U7-21
+Removed Pin From Net: NetName=SPI1.MISO Pin=U7-22
+Removed Pin From Net: NetName=SPI1.MOSI Pin=U7-23
+Removed Pin From Net: NetName=NRF24L01_CE Pin=U7-24
+Removed Pin From Net: NetName=NRF24L01_IRQ Pin=U7-25
+Removed Pin From Net: NetName=BAT_CHECK Pin=U7-26
+Removed Pin From Net: NetName=GND Pin=U7-31
+Removed Pin From Net: NetName=3V3 Pin=U7-32
+Removed Pin From Net: NetName=USART1_TX Pin=U7-42
+Removed Pin From Net: NetName=USART1_RX Pin=U7-43
+Removed Pin From Net: NetName=SWDIO Pin=U7-46
+Removed Pin From Net: NetName=SWCLK Pin=U7-49
+Removed Pin From Net: NetName=HMC5883_IRQ Pin=U7-56
+Removed Pin From Net: NetName=MPU6050_IRQ Pin=U7-57
+Removed Pin From Net: NetName=I2C1.SCL Pin=U7-58
+Removed Pin From Net: NetName=I2C1.SDA Pin=U7-59
+Removed Pin From Net: NetName=NetR22_2 Pin=U7-60
+Removed Pin From Net: NetName=GND Pin=U7-63
+Removed Pin From Net: NetName=3V3 Pin=U7-64
+Change Component DesignItemId : Designator=U7 Old DesignItemId=STM32F103RC New DesignItemId=STM32F103C8T6
+Change Component Footprint: Designator=Y1 Old Footprint=3225 New Footprint=OSC_SMD_
+Change Component Footprint: Designator=U7 Old Footprint=STM32F_64 New Footprint=TQFP_48
+Change Component Comment : Designator=U7 Old Comment=STM32F103RC New Comment=STM32F103C8T6
+Added Component: Designator=C19(CAP_0603)
+Added Component: Designator=C20(CAP_0603)
+Added Pin To Net: NetName=3V3 Pin=C19-1
+Added Pin To Net: NetName=GND Pin=C19-2
+Added Pin To Net: NetName=3V3 Pin=C20-1
+Added Pin To Net: NetName=GND Pin=C20-2
+Added Pin To Net: NetName=GND Pin=U7-8
+Added Pin To Net: NetName=3V3 Pin=U7-9
+Added Pin To Net: NetName=PWM.M1 Pin=U7-10
+Added Pin To Net: NetName=PWM.M2 Pin=U7-11
+Added Pin To Net: NetName=PWM.M3 Pin=U7-12
+Added Pin To Net: NetName=PWM.M4 Pin=U7-13
+Added Pin To Net: NetName=NRF24L01_CSN Pin=U7-14
+Added Pin To Net: NetName=SPI1.SCLK Pin=U7-15
+Added Pin To Net: NetName=SPI1.MISO Pin=U7-16
+Added Pin To Net: NetName=SPI1.MOSI Pin=U7-17
+Added Pin To Net: NetName=BAT_CHECK Pin=U7-18
+Added Pin To Net: NetName=GPIO_LED2 Pin=U7-19
+Added Pin To Net: NetName=GPIO_BELL Pin=U7-20
+Added Pin To Net: NetName=GND Pin=U7-23
+Added Pin To Net: NetName=3V3 Pin=U7-24
+Added Pin To Net: NetName=GPIO_LED0 Pin=U7-29
+Added Pin To Net: NetName=USART1_TX Pin=U7-30
+Added Pin To Net: NetName=USART1_RX Pin=U7-31
+Added Pin To Net: NetName=GPIO_LED1 Pin=U7-32
+Added Pin To Net: NetName=NRF24L01_CE Pin=U7-33
+Added Pin To Net: NetName=SWDIO Pin=U7-34
+Added Pin To Net: NetName=GND Pin=U7-35
+Added Pin To Net: NetName=3V3 Pin=U7-36
+Added Pin To Net: NetName=SWCLK Pin=U7-37
+Added Pin To Net: NetName=NRF24L01_IRQ Pin=U7-38
+Added Pin To Net: NetName=GPIO_LED3 Pin=U7-39
+Added Pin To Net: NetName=HMC5883_IRQ Pin=U7-40
+Added Pin To Net: NetName=MPU6050_IRQ Pin=U7-41
+Added Pin To Net: NetName=I2C1.SCL Pin=U7-42
+Added Pin To Net: NetName=I2C1.SDA Pin=U7-43
+Added Pin To Net: NetName=NetR22_2 Pin=U7-44
+Added Pin To Net: NetName=SPI2.MISO Pin=U7-27
+Added Net: Name=SPI2.MISO
+Added Pin To Net: NetName=SPI2.MOSI Pin=U7-28
+Added Net: Name=SPI2.MOSI
+Added Pin To Net: NetName=SPI2.SCLK Pin=U7-26
+Added Net: Name=SPI2.SCLK
+Added Pin To Net: NetName=USART3_RX Pin=U7-22
+Added Net: Name=USART3_RX
+Added Pin To Net: NetName=USART3_TX Pin=U7-21
+Added Net: Name=USART3_TX
+Added Member To Class: ClassName=STM32F103RC Member=Component C19 Cap
+Added Member To Class: ClassName=STM32F103RC Member=Component C20 Cap

@@ -1,0 +1,3 @@
+Removed Member From Class: ClassName=POWER Member=R16
+Change Component Footprint: Designator=U7 Old Footprint=STM32F103RC_QFP64 New Footprint=STM32F_64
+Added Member To Class: ClassName=POWER Member=Component R15 Res Semi

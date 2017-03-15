@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=UART1_TX Pin=U7-30
+Added Pin To Net: NetName=UART1_RX Pin=U7-31
+Change Net Name : Old Net Name=USART3_RX New Net Name=UART3_RX
+Change Net Name : Old Net Name=USART3_TX New Net Name=UART3_TX

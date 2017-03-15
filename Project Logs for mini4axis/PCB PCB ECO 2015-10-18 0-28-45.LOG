@@ -1,0 +1,17 @@
+Change Component Footprint: Designator=D3 Old Footprint=LED_0603_BLUE New Footprint=LED_0603_RED
+Change Component Footprint: Designator=Y1 Old Footprint=XTAL New Footprint=XTAL_SMD
+Change Component Designator: OldDesignator=R15 NewDesignator=R16
+Change Component Designator: OldDesignator=R16 NewDesignator=R17
+Change Component Designator: OldDesignator=R17 NewDesignator=R18
+Change Component Designator: OldDesignator=R18 NewDesignator=R19
+Change Component Designator: OldDesignator=R19 NewDesignator=R20
+Added Component: Designator=D7(LED_0603_RED)
+Added Component: Designator=R15(RES_0603)
+Added Pin To Net: NetName=GND Pin=D7-2
+Added Pin To Net: NetName=3V3 Pin=R15-2
+Change Net Name : Old Net Name=NetR18_2 New Net Name=NetR19_2
+Added Pin To Net: NetName=NetD7_1 Pin=D7-1
+Added Pin To Net: NetName=NetD7_1 Pin=R15-1
+Added Net: Name=NetD7_1
+Added Member To Class: ClassName=POWER Member=Component D7 LED0
+Added Member To Class: ClassName=POWER Member=Component R15 Res Semi

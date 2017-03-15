@@ -1,0 +1,23 @@
+Removed Member From Class: ClassName=LED BELL Member=D6
+Removed Member From Class: ClassName=LED BELL Member=D7
+Removed Member From Class: ClassName=LED BELL Member=R7
+Removed Member From Class: ClassName=LED BELL Member=R8
+Removed Member From Class: ClassName=MOTORS Member=R11
+Removed Member From Class: ClassName=MOTORS Member=R12
+Removed Member From Class: ClassName=MPU6050 Member=R20
+Removed Member From Class: ClassName=POWER Member=R20
+Removed Member From Class: ClassName=MPU6050 Member=R21
+Removed Member From Class: ClassName=POWER Member=R21
+Added Member To Class: ClassName=LED BELL Member=Component D3 LED0
+Added Member To Class: ClassName=LED BELL Member=Component D4 LED0
+Added Member To Class: ClassName=POWER Member=Component D5 LED0
+Added Member To Class: ClassName=POWER Member=Component D6 Diode 1N914
+Added Member To Class: ClassName=LED BELL Member=Component R4 Res1
+Added Member To Class: ClassName=LED BELL Member=Component R5 Res1
+Added Member To Class: ClassName=MOTORS Member=Component R7 Res1
+Added Member To Class: ClassName=MOTORS Member=Component R8 Res1
+Added Member To Class: ClassName=POWER Member=Component R11 Res Semi
+Added Member To Class: ClassName=POWER Member=Component R12 Res Semi
+Added Member To Class: ClassName=MPU6050 Member=Component R18 Res1
+Added Member To Class: ClassName=MPU6050 Member=Component R19 Res1
+Added Member To Class: ClassName=STM32F103RC Member=Component R20 Res1
